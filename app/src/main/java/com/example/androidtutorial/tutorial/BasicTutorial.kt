@@ -24,8 +24,11 @@ fun main(){
     mutableList.add("six")
 
     // for(i = 0, i < mutableList.size, i ++)
-    mutableList.forEach {  number ->
-        printSomething(number)
+    mutableList.forEach {
+        printSomething(it)
+    }
+    mutableList.forEachIndexed{ index, element ->
+
     }
 
     val set = setOf("three","two","one")
