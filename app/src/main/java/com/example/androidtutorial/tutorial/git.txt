@@ -1,2 +1,4 @@
 1. clone
 2. branch
+3. staging
+4. patch
