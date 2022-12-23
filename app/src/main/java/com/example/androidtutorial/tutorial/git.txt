@@ -1,2 +1,5 @@
 1. clone
 2. branch
+3. fetch
+4. pull
+5. merge
