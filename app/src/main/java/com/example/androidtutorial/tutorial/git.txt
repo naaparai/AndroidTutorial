@@ -1,4 +1,7 @@
 1. clone
 2. branch
-3. staging
-4. patch
+3. fetch
+4. pull
+5. merge
+6. staging
+7. patch
