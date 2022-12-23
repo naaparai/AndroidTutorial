@@ -7,25 +7,23 @@
     tools:context=".MainActivity">
 
     <Button
-        app:layout_constraintWidth_percent=".5"
-        app:layout_constraintHeight_percent=".5"
         android:id="@+id/btn_save_me"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="Save Me"
+        android:layout_height="wrap_content"
+        android:text="Go to Second"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintWidth_percent=".5" />
 
     <TextView
-        android:textSize="32sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Android Tutorial"
+        android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_save_me"
         app:layout_constraintEnd_toEndOf="@+id/btn_save_me"
         app:layout_constraintStart_toStartOf="@+id/btn_save_me" />
