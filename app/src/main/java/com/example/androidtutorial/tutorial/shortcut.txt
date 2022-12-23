@@ -3,3 +3,6 @@ short cuts
 1.close :  mac - cmd + w, ctrl + f4
 2. Recent file : mac - cmd + e, ctrl + e
 3. search everything : window and mac : shift shift
+
+// install ktlink
+4. auto format code : window : Ctrl + atl + l, mac : cmd + opt + l
