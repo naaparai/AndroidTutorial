@@ -1,0 +1,19 @@
+1. Kotlin Basic
+2. Git with source tree
+3. Android architecture
+4. Android components and basics
+    a. Android Views (TextView, Button, EditText, Swtich)
+    b. Android container (ConstraintLayout, LinearLayout, RelativeLayout)
+    c. Android Activity LifeCycle
+    d. Intent, Bundle, Arguments
+    e. Fragment, NavigationGraph
+    f. Service, Broadcast Receiver
+    g. WorkManager
+    h. style
+
+5. Android design patter (MVVM)
+    a. databinding
+    b. MVVM concept
+6. Coroutine
+7. Hilt DI
+8. Debugging
