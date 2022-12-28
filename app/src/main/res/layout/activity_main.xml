@@ -40,11 +40,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Switch
-        android:theme="@style/SCBSwitch"
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:checked="true" />
+        android:checked="true"
+        android:theme="@style/SCBSwitch" />
 
     <Button
         android:id="@+id/button1"
@@ -56,5 +56,11 @@
         android:textAllCaps="false"
         android:textColor="#F44336"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonTutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to tutorial" />
 
 </LinearLayout>

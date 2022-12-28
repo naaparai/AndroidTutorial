@@ -2,18 +2,20 @@
 2. Git with source tree
 3. Android architecture
 4. Android components and basics
-    a. Android Views (TextView, Button, EditText, Swtich)
-    b. Android container (ConstraintLayout, LinearLayout, RelativeLayout)
+    a. Android Views (TextView, Button, EditText, Switch)
+    b. Android container ( LinearLayout, RelativeLayout,ScrollView,ConstraintLayout, MotionLayout(advance))
     c. Android Activity LifeCycle
-    d. Intent, Bundle, Arguments
+    d. Intent, Bundle, Arguments (with fragment)
     e. Fragment, NavigationGraph
-    f. Service, Broadcast Receiver
+    f. Service, Broadcast Receiver, Activity, ContentProvider (4 component)
     g. WorkManager
     h. style
 
-5. Android design patter (MVVM)
+5. Room Db
+6. Retrofit
+7. Android design patter (MVVM)
     a. databinding
     b. MVVM concept
-6. Coroutine
-7. Hilt DI
-8. Debugging
+8. Coroutine
+9. Hilt DI
+10. Debugging

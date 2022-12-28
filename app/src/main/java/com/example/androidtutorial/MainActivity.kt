@@ -1,5 +1,6 @@
 package com.example.androidtutorial
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -12,6 +13,7 @@ import androidx.core.widget.addTextChangedListener
 class MainActivity : AppCompatActivity() {
     lateinit var textView1: TextView
     lateinit var button1: Button
+    lateinit var buttonTutorial: Button
     lateinit var editText1: EditText
     lateinit var switch1: Switch
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         textView1 = findViewById(R.id.textView1)
         button1 = findViewById(R.id.button1)
+        buttonTutorial = findViewById(R.id.buttonTutorial)
         editText1 = findViewById(R.id.editText1)
         switch1 = findViewById(R.id.switch1)
         button1.setOnClickListener {
@@ -51,6 +54,10 @@ class MainActivity : AppCompatActivity() {
             } else {
                 textView1.visibility = View.GONE
             }
+        }
+        buttonTutorial.setOnClickListener {
+            val intent = Intent(this, TutorialActivity::class.java)
+            startActivity(intent)
         }
     }
 }
