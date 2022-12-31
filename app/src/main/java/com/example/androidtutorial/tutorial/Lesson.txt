@@ -11,11 +11,13 @@
     g. WorkManager
     h. style
 
-5. Room Db
-6. Retrofit
-7. Android design patter (MVVM)
+5. RecyclerView
+6. Room Db
+7. Retrofit
+8. Android design patter (MVVM)
     a. databinding
     b. MVVM concept
-8. Coroutine
-9. Hilt DI
-10. Debugging
+9. Coroutine
+10. Hilt DI
+11. SOLID
+12. Debugging
