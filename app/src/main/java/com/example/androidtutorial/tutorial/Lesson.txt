@@ -3,7 +3,7 @@
 3. Android architecture
 4. Android components and basics
     a. Android Views (TextView, Button, EditText, Switch)
-    b. Android container ( LinearLayout, RelativeLayout,ScrollView,ConstraintLayout, MotionLayout(advance))
+    b. Android container ( LinearLayout, RelativeLayout,ScrollView, CoordinatorLayout,ConstraintLayout, MotionLayout(advance))
     c. Android Activity LifeCycle
     d. Intent, Bundle, Arguments (with fragment)
     e. Fragment, NavigationGraph
