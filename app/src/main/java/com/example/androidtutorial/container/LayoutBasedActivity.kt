@@ -11,7 +11,6 @@ class LayoutBasedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_layout_based)
-        // setSupportActionBar(findViewById(R.id.toolbar))
 
         fab = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
