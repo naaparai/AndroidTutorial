@@ -46,5 +46,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Service" />
+    <Button
+        android:id="@+id/buttonBroadCast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Broadcast" />
 
 </LinearLayout>

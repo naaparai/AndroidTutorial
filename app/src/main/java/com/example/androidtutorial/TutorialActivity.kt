@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidtutorial.activitylifecycle.FirstActivity
+import com.example.androidtutorial.broadcast.BroadCastActivity
 import com.example.androidtutorial.container.ConstraintActivity
 import com.example.androidtutorial.container.LinearLayoutActivity
 import com.example.androidtutorial.container.RelativeLayoutActivity
@@ -20,6 +21,7 @@ class TutorialActivity : AppCompatActivity() {
     lateinit var buttonLifeCycle: Button
     lateinit var buttonFragment: Button
     lateinit var buttonService: Button
+    lateinit var buttonBroadCast: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tutorial)
@@ -30,6 +32,7 @@ class TutorialActivity : AppCompatActivity() {
         buttonLifeCycle = findViewById(R.id.buttonLifeCycle)
         buttonFragment = findViewById(R.id.buttonFragment)
         buttonService = findViewById(R.id.buttonService)
+        buttonBroadCast = findViewById(R.id.buttonBroadCast)
         buttonLinearLayout.setOnClickListener {
             val intent = Intent(this, LinearLayoutActivity::class.java)
             startActivity(intent)
@@ -56,6 +59,10 @@ class TutorialActivity : AppCompatActivity() {
         }
         buttonService.setOnClickListener {
             val intent = Intent(this, ServiceActivity::class.java)
+            startActivity(intent)
+        }
+        buttonBroadCast.setOnClickListener {
+            val intent = Intent(this, BroadCastActivity::class.java)
             startActivity(intent)
         }
     }
