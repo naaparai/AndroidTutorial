@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TutorialActivity">
+
+    <Button
+        android:id="@+id/buttonLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Linear Layout" />
+
+    <Button
+        android:id="@+id/buttonRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relative Layout" />
+
+    <Button
+        android:id="@+id/buttonScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ScrollView" />
+    <Button
+        android:id="@+id/buttonConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Constraint Layout" />
+    <Button
+        android:id="@+id/buttonLifeCycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity life cycle" />
+
+    <Button
+        android:id="@+id/buttonFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragment" />
+
+    <Button
+        android:id="@+id/buttonService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service" />
+    <Button
+        android:id="@+id/buttonBroadCast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Broadcast" />
+
+</LinearLayout>

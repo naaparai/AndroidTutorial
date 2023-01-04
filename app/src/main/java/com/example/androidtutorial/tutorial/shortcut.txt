@@ -3,6 +3,9 @@ short cuts
 1.close :  mac - cmd + w, ctrl + f4
 2. Recent file : mac - cmd + e, ctrl + e
 3. search everything : window and mac : shift shift
+4. auto import : window: atl + enter, mac : opt + enter
+5. copy paste line : window: ctrl + d, mac : cmd + d
+6. comment section : window: ctrl + shift + /
 
 // install ktlink
-4. auto format code : window : Ctrl + atl + l, mac : cmd + opt + l
+1. auto format code : window : Ctrl + atl + l, mac : cmd + opt + l
