@@ -6,4 +6,4 @@
 6. staging
 7. patch
 8. gitflow
-9. some git lesson
+9. some git lesson and another git lesson
