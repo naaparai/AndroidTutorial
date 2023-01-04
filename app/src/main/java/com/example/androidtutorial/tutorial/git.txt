@@ -5,4 +5,4 @@
 5. merge
 6. staging
 7. patch
-gitflow
+8. gitflow
