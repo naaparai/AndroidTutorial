@@ -9,7 +9,6 @@
     e. Fragment, NavigationGraph
     f. Service, Broadcast Receiver, Activity, ContentProvider (4 component)
     g. WorkManager
-    h. style
 
 5. RecyclerView
 6. Room Db
