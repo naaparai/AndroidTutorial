@@ -19,6 +19,7 @@ class BroadCastActivity : AppCompatActivity() {
         textViewBTStatus = findViewById(R.id.textViewBluetooth)
         val filter1 = IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED)
         registerReceiver(mBroadcastReceiver1, filter1)
+        // some comment
     }
 
     override fun onDestroy() {
