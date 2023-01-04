@@ -7,6 +7,7 @@ import com.example.androidtutorial.R
 class LinearLayoutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // comment
         setContentView(R.layout.activity_linear_layout)
     }
 }
