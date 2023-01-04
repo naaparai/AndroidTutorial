@@ -14,7 +14,7 @@ class LayoutBasedActivity : AppCompatActivity() {
 
         fab = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
-            Snackbar.make(view, getString(R.string.msg_clicked), Snackbar.LENGTH_LONG)
+            Snackbar.make(view, getString(R.string.app_name), Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
     }

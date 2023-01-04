@@ -10,6 +10,7 @@ import com.example.androidtutorial.container.LinearLayoutActivity
 import com.example.androidtutorial.container.RelativeLayoutActivity
 import com.example.androidtutorial.container.ScrollViewActivity
 import com.example.androidtutorial.fragment.FragmentTutorialActivity
+import com.example.androidtutorial.service.ServiceActivity
 
 class TutorialActivity : AppCompatActivity() {
     lateinit var buttonLinearLayout: Button
@@ -18,6 +19,7 @@ class TutorialActivity : AppCompatActivity() {
     lateinit var buttonConstraintLayout: Button
     lateinit var buttonLifeCycle: Button
     lateinit var buttonFragment: Button
+    lateinit var buttonService: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tutorial)
@@ -27,6 +29,7 @@ class TutorialActivity : AppCompatActivity() {
         buttonConstraintLayout = findViewById(R.id.buttonConstraintLayout)
         buttonLifeCycle = findViewById(R.id.buttonLifeCycle)
         buttonFragment = findViewById(R.id.buttonFragment)
+        buttonService = findViewById(R.id.buttonService)
         buttonLinearLayout.setOnClickListener {
             val intent = Intent(this, LinearLayoutActivity::class.java)
             startActivity(intent)
@@ -49,6 +52,10 @@ class TutorialActivity : AppCompatActivity() {
         }
         buttonFragment.setOnClickListener {
             val intent = Intent(this, FragmentTutorialActivity::class.java)
+            startActivity(intent)
+        }
+        buttonService.setOnClickListener {
+            val intent = Intent(this, ServiceActivity::class.java)
             startActivity(intent)
         }
     }

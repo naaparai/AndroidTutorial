@@ -36,9 +36,15 @@
         android:text="Activity life cycle" />
 
     <Button
-        android:id="@+id/buttonCoordinatorLayout"
+        android:id="@+id/buttonFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Coordinator Layout" />
+        android:text="Fragment" />
+
+    <Button
+        android:id="@+id/buttonService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service" />
 
 </LinearLayout>
