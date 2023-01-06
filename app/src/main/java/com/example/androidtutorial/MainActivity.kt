@@ -4,31 +4,26 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
-import android.widget.Switch
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
+import androidx.databinding.DataBindingUtil
+import com.example.androidtutorial.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var textView1: TextView
-    lateinit var button1: Button
-    lateinit var buttonTutorial: Button
-    lateinit var editText1: EditText
-    lateinit var switch1: Switch
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        textView1 = findViewById(R.id.textView1)
-        button1 = findViewById(R.id.button1)
-        buttonTutorial = findViewById(R.id.buttonTutorial)
-        editText1 = findViewById(R.id.editText1)
-        switch1 = findViewById(R.id.switch1)
-        button1.setOnClickListener {
-            val text = editText1.text
-            textView1.text = text
+        val binding: ActivityMainBinding = DataBindingUtil.setContentView(
+            this,
+            R.layout.activity_main
+        )
+        val someObject = SomeObject("this is from object", "", false)
+        val otherObject = OtherObject("this is from object")
+        binding.someObject = someObject
+        binding.button1.setOnClickListener {
+            val text = "${someObject.passwordText} ${someObject.switchBoolean}"
+            binding.textView1.text = text
         }
-        button1.setOnLongClickListener {
+        binding.button1.setOnLongClickListener {
             (it as Button).text = "LongClicked"
             true
         }
@@ -43,21 +38,24 @@ class MainActivity : AppCompatActivity() {
              }
          })*/
 
-        editText1.addTextChangedListener {
-            val length = editText1.length()
+        binding.editText1.addTextChangedListener {
+            val length = binding.editText1.length()
             val text = "Word count = $length"
-            textView1.text = text
+            binding.textView1.text = text
         }
-        switch1.setOnCheckedChangeListener { _, b ->
+        binding.switch1.setOnCheckedChangeListener { _, b ->
             if (b) {
-                textView1.visibility = View.VISIBLE
+                binding.textView1.visibility = View.VISIBLE
             } else {
-                textView1.visibility = View.GONE
+                binding.textView1.visibility = View.GONE
             }
         }
-        buttonTutorial.setOnClickListener {
+        binding.buttonTutorial.setOnClickListener {
             val intent = Intent(this, TutorialActivity::class.java)
             startActivity(intent)
         }
     }
 }
+
+data class SomeObject(val someString: String, var passwordText: String, var switchBoolean: Boolean)
+data class OtherObject(val someString: String)

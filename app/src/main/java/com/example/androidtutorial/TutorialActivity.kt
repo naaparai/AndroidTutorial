@@ -2,8 +2,8 @@ package com.example.androidtutorial
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import com.example.androidtutorial.activitylifecycle.FirstActivity
 import com.example.androidtutorial.broadcast.BroadCastActivity
 import com.example.androidtutorial.container.ConstraintActivity
@@ -11,64 +11,54 @@ import com.example.androidtutorial.container.LinearLayoutActivity
 import com.example.androidtutorial.container.RelativeLayoutActivity
 import com.example.androidtutorial.container.ScrollViewActivity
 import com.example.androidtutorial.coroutine.CoroutineActivity
+import com.example.androidtutorial.databinding.ActivityTutorialBinding
 import com.example.androidtutorial.fragment.FragmentTutorialActivity
 import com.example.androidtutorial.service.ServiceActivity
 
 class TutorialActivity : AppCompatActivity() {
-    lateinit var buttonLinearLayout: Button
-    lateinit var buttonRelativeLayout: Button
-    lateinit var buttonScrollView: Button
-    lateinit var buttonConstraintLayout: Button
-    lateinit var buttonLifeCycle: Button
-    lateinit var buttonFragment: Button
-    lateinit var buttonService: Button
-    lateinit var buttonBroadCast: Button
-    lateinit var buttonCoroutine: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val binding: ActivityTutorialBinding = DataBindingUtil.setContentView(
+            this,
+            R.layout.activity_tutorial
+        )
+
         setContentView(R.layout.activity_tutorial)
-        buttonLinearLayout = findViewById(R.id.buttonLinearLayout)
-        buttonRelativeLayout = findViewById(R.id.buttonRelativeLayout)
-        buttonScrollView = findViewById(R.id.buttonScrollView)
-        buttonConstraintLayout = findViewById(R.id.buttonConstraintLayout)
-        buttonLifeCycle = findViewById(R.id.buttonLifeCycle)
-        buttonFragment = findViewById(R.id.buttonFragment)
-        buttonService = findViewById(R.id.buttonService)
-        buttonBroadCast = findViewById(R.id.buttonBroadCast)
-        buttonCoroutine = findViewById(R.id.buttonCoroutine)
-        buttonLinearLayout.setOnClickListener {
+        binding.buttonLinearLayout.setOnClickListener {
             val intent = Intent(this, LinearLayoutActivity::class.java)
             startActivity(intent)
         }
-        buttonRelativeLayout.setOnClickListener {
+        binding.buttonRelativeLayout.setOnClickListener {
             val intent = Intent(this, RelativeLayoutActivity::class.java)
             startActivity(intent)
         }
-        buttonScrollView.setOnClickListener {
+        binding.buttonScrollView.setOnClickListener {
             val intent = Intent(this, ScrollViewActivity::class.java)
             startActivity(intent)
         }
-        buttonConstraintLayout.setOnClickListener {
+        binding.buttonConstraintLayout.setOnClickListener {
             val intent = Intent(this, ConstraintActivity::class.java)
             startActivity(intent)
         }
-        buttonLifeCycle.setOnClickListener {
+        binding.buttonLifeCycle.setOnClickListener {
             val intent = Intent(this, FirstActivity::class.java)
             startActivity(intent)
         }
-        buttonFragment.setOnClickListener {
+        binding.buttonFragment.setOnClickListener {
             val intent = Intent(this, FragmentTutorialActivity::class.java)
             startActivity(intent)
         }
-        buttonService.setOnClickListener {
+        binding.buttonService.setOnClickListener {
             val intent = Intent(this, ServiceActivity::class.java)
             startActivity(intent)
         }
-        buttonBroadCast.setOnClickListener {
+        binding.buttonBroadCast.setOnClickListener {
             val intent = Intent(this, BroadCastActivity::class.java)
             startActivity(intent)
         }
-        buttonCoroutine.setOnClickListener {
+        binding.buttonCoroutine.setOnClickListener {
             val intent = Intent(this, CoroutineActivity::class.java)
             startActivity(intent)
         }
