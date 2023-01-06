@@ -8,7 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import androidx.databinding.DataBindingUtil
 import com.example.androidtutorial.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,5 +60,11 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-data class SomeObject(val someString: String, var passwordText: String, var switchBoolean: Boolean)
+data class SomeObject @Inject constructor(
+    val someString: String,
+    var passwordText: String,
+    var switchBoolean: Boolean,
+    val otherObject: OtherObject
+)
+
 data class OtherObject(val someString: String)
