@@ -10,6 +10,7 @@ import com.example.androidtutorial.container.ConstraintActivity
 import com.example.androidtutorial.container.LinearLayoutActivity
 import com.example.androidtutorial.container.RelativeLayoutActivity
 import com.example.androidtutorial.container.ScrollViewActivity
+import com.example.androidtutorial.coroutine.CoroutineActivity
 import com.example.androidtutorial.fragment.FragmentTutorialActivity
 import com.example.androidtutorial.service.ServiceActivity
 
@@ -22,6 +23,7 @@ class TutorialActivity : AppCompatActivity() {
     lateinit var buttonFragment: Button
     lateinit var buttonService: Button
     lateinit var buttonBroadCast: Button
+    lateinit var buttonCoroutine: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tutorial)
@@ -33,6 +35,7 @@ class TutorialActivity : AppCompatActivity() {
         buttonFragment = findViewById(R.id.buttonFragment)
         buttonService = findViewById(R.id.buttonService)
         buttonBroadCast = findViewById(R.id.buttonBroadCast)
+        buttonCoroutine = findViewById(R.id.buttonCoroutine)
         buttonLinearLayout.setOnClickListener {
             val intent = Intent(this, LinearLayoutActivity::class.java)
             startActivity(intent)
@@ -63,6 +66,10 @@ class TutorialActivity : AppCompatActivity() {
         }
         buttonBroadCast.setOnClickListener {
             val intent = Intent(this, BroadCastActivity::class.java)
+            startActivity(intent)
+        }
+        buttonCoroutine.setOnClickListener {
+            val intent = Intent(this, CoroutineActivity::class.java)
             startActivity(intent)
         }
     }

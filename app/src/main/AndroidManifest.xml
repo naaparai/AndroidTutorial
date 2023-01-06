@@ -15,6 +15,13 @@
         android:theme="@style/Theme.AndroidTutorial"
         tools:targetApi="31">
         <activity
+            android:name=".coroutine.CoroutineActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".broadcast.BroadCastActivity"
             android:exported="false">
             <meta-data
