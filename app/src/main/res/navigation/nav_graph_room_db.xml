@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_room_db.xml"
+    app:startDestination="@id/insertFragment">
+
+    <fragment
+        android:id="@+id/insertFragment"
+        android:name="com.example.androidtutorial.roomdb.InsertFragment"
+        android:label="InsertFragment" >
+        <action
+            android:id="@+id/actionGotoDisplay"
+            app:destination="@id/displayUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayUserFragment"
+        android:name="com.example.androidtutorial.roomdb.DisplayUserFragment"
+        android:label="DisplayUserFragment" />
+</navigation>

@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
             R.layout.activity_main
         )
         val someObject = SomeObject("this is from object", "", false)
-        val otherObject = OtherObject("this is from object")
         binding.someObject = someObject
         binding.button1.setOnClickListener {
             val text = "${someObject.passwordText} ${someObject.switchBoolean}"
@@ -63,8 +62,7 @@ class MainActivity : AppCompatActivity() {
 data class SomeObject @Inject constructor(
     val someString: String,
     var passwordText: String,
-    var switchBoolean: Boolean,
-    val otherObject: OtherObject
+    var switchBoolean: Boolean
 )
 
 data class OtherObject(val someString: String)

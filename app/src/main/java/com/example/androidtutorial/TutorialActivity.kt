@@ -13,6 +13,7 @@ import com.example.androidtutorial.container.ScrollViewActivity
 import com.example.androidtutorial.coroutine.CoroutineActivity
 import com.example.androidtutorial.databinding.ActivityTutorialBinding
 import com.example.androidtutorial.fragment.FragmentTutorialActivity
+import com.example.androidtutorial.roomdb.RoomDbActivity
 import com.example.androidtutorial.service.ServiceActivity
 
 class TutorialActivity : AppCompatActivity() {
@@ -25,7 +26,6 @@ class TutorialActivity : AppCompatActivity() {
             R.layout.activity_tutorial
         )
 
-        setContentView(R.layout.activity_tutorial)
         binding.buttonLinearLayout.setOnClickListener {
             val intent = Intent(this, LinearLayoutActivity::class.java)
             startActivity(intent)
@@ -60,6 +60,10 @@ class TutorialActivity : AppCompatActivity() {
         }
         binding.buttonCoroutine.setOnClickListener {
             val intent = Intent(this, CoroutineActivity::class.java)
+            startActivity(intent)
+        }
+        binding.buttonRoomDb.setOnClickListener {
+            val intent = Intent(this, RoomDbActivity::class.java)
             startActivity(intent)
         }
     }
