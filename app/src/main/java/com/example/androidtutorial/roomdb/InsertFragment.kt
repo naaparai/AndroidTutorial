@@ -8,12 +8,11 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.room.Room
 import com.example.androidtutorial.R
 import com.example.androidtutorial.databinding.FragmentInsertBinding
-import kotlinx.coroutines.launch
+import com.example.androidtutorial.roomdb.repo.UserRepoImpl
 
 class InsertFragment : Fragment() {
 
@@ -22,11 +21,14 @@ class InsertFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
+
         db = Room.databaseBuilder(
             context,
             AppDatabase::class.java,
             "database-name"
         ).build()
+        val userRepo = UserRepoImpl(db.userDao())
+        viewModel.initRepo(userRepo)
     }
 
     override fun onCreateView(
@@ -44,10 +46,10 @@ class InsertFragment : Fragment() {
             val firstName = binding.etFirstName.text.toString()
             val lastName = binding.etLastName.text.toString()
             val user = User(firstName, lastName)
-            lifecycleScope.launch {
-                db.userDao().insertUser(user)
-            }
+            viewModel.insertUser(user)
         }
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = this
         binding.buttonShowList.setOnClickListener {
             findNavController().navigate(R.id.actionGotoDisplay)
         }

@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.androidtutorial.roomdb.DisplayUserViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
         tools:context=".roomdb.DisplayUserFragment">
 
         <TextView
             android:id="@+id/tvDisplay"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Hello Display"
+            android:layout_height="wrap_content"
+            android:background="#8BC34A"
+            android:text="@{viewModel.usersMutableLiveData}"
             android:textSize="16sp" />
 
-    </FrameLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_launcher_background"
+            app:loadImage="@{viewModel.imageMutableLiveData}" />
+
+    </LinearLayout>
 </layout>
