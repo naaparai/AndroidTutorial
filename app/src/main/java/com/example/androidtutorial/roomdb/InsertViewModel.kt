@@ -3,14 +3,15 @@ package com.example.androidtutorial.roomdb
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.androidtutorial.roomdb.repo.UserRepo
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
+import javax.inject.Named
 
-class InsertViewModel : ViewModel() {
-    lateinit var userRepo: UserRepo
-    fun initRepo(userRepo: UserRepo) {
-        this.userRepo = userRepo
-    }
-
+@HiltViewModel
+class InsertViewModel @Inject constructor(
+    @Named("userRepo") private val userRepo: UserRepo
+) : ViewModel() {
     fun insertUser(user: User) {
         viewModelScope.launch {
             userRepo.insertUser(user)

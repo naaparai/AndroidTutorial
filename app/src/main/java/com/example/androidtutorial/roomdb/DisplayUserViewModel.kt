@@ -4,15 +4,16 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.androidtutorial.roomdb.repo.UserRepo
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class DisplayUserViewModel : ViewModel() {
+@HiltViewModel
+class DisplayUserViewModel @Inject constructor(
+    private val userRepo: UserRepo
+) : ViewModel() {
     val usersMutableLiveData = MutableLiveData("")
     val imageMutableLiveData = MutableLiveData("")
-    lateinit var userRepo: UserRepo
-    fun initUserRepo(userRepo: UserRepo) {
-        this.userRepo = userRepo
-    }
 
     fun load() {
         imageMutableLiveData.postValue("https://picsum.photos/200/300")
