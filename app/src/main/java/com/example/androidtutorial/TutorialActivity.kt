@@ -13,6 +13,7 @@ import com.example.androidtutorial.container.ScrollViewActivity
 import com.example.androidtutorial.coroutine.CoroutineActivity
 import com.example.androidtutorial.databinding.ActivityTutorialBinding
 import com.example.androidtutorial.fragment.FragmentTutorialActivity
+import com.example.androidtutorial.heterogenous.HeterogenousActivity
 import com.example.androidtutorial.roomdb.RoomDbActivity
 import com.example.androidtutorial.service.ServiceActivity
 
@@ -64,6 +65,10 @@ class TutorialActivity : AppCompatActivity() {
         }
         binding.buttonRoomDb.setOnClickListener {
             val intent = Intent(this, RoomDbActivity::class.java)
+            startActivity(intent)
+        }
+        binding.buttonHetero.setOnClickListener {
+            val intent = Intent(this, HeterogenousActivity::class.java)
             startActivity(intent)
         }
     }

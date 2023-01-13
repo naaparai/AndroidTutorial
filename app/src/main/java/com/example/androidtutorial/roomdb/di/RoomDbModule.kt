@@ -18,7 +18,6 @@ import javax.inject.Named
 object RoomDbModule {
 
     @Provides
-    @Named("userRepo")
     fun provideUserRepo(userDao: UserDao): UserRepo {
         return UserRepoImpl(userDao)
     }

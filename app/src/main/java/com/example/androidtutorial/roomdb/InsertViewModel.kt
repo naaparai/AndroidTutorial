@@ -6,11 +6,10 @@ import com.example.androidtutorial.roomdb.repo.UserRepo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import javax.inject.Named
 
 @HiltViewModel
 class InsertViewModel @Inject constructor(
-    @Named("userRepo") private val userRepo: UserRepo
+    private val userRepo: UserRepo
 ) : ViewModel() {
     fun insertUser(user: User) {
         viewModelScope.launch {
